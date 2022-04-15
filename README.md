@@ -8,7 +8,7 @@
 # Homebridge Tami4 Edge Shield plugin
 
 This plugin allows you to boil water on your tami4edge device from homekit.
-
+Doesnt work:
 To get token login at <https://www.tami4.co.il/area/lobby> open console and run
 
 ```javascript

@@ -44,7 +44,7 @@ export class Tami4 implements DynamicPlatformPlugin {
     try {
       response = await instance.post(Commands.SPLASH_SCREEN);
     } catch (error) {
-      if(axios.isAxiosError(error)) {
+      if (axios.isAxiosError(error)) {
         response = error.response!;
       }
     }
@@ -55,10 +55,10 @@ export class Tami4 implements DynamicPlatformPlugin {
     try {
       const token_response = await instance.post(Commands.TOKEN_REFRESH, {
         'token': this.config.refresh_token,
-      }); this.log.info('Token refreshed');
+      }); this.log.debug('Token refreshed');
       this.access_token = token_response.data['access_token'];
-    } catch(error) {
-      this.log.info('Token refresh error');
+    } catch (error) {
+      this.log.debug('Token refresh error');
     }
   }
 
